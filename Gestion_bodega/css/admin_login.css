@@ -1,0 +1,72 @@
+@charset "ISO-8859-1";
+/* CSS Document */
+
+body {
+  background-image: url("../imagenes/fondo2.jpg");
+  background-repeat: round;
+  background-attachment: fixed;
+}
+
+#encabezado {
+  width: 960px;
+  margin-top: 5px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  background: transparent;
+}
+
+#contenedor {
+  border-radius: 60px;
+  align-items: center;
+  width: 700px;
+  margin-top: 100px;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
+  background-color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  opacity: 0.8;
+  color: white;
+}
+
+.logo {
+  margin-top: 5px;
+  margin-left: 165px;
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+.titulo {
+  color: white;
+  font-weight: bold;
+  font-family: arial;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+p {
+  color: white;
+  text-align: justify;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: arial;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  font-family: courier;
+}
+
+.reg {
+  font-size: 10px;
+  height: 35px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}

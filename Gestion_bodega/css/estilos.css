@@ -1,0 +1,88 @@
+@charset "ISO-8859-1";
+/* CSS Document */
+
+#contenedor_grande {
+  width: 960px;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+}
+
+#encabezado {
+  width: 960px;
+  margin-top: 5px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  background: transparent;
+}
+
+#contenedor {
+  align-items: center;
+  width: 960px;
+  margin-top: 5px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  background: transparent;
+  color: white;
+}
+
+.logo {
+  margin-top: 50px;
+  margin-left: 350px;
+  margin-bottom: 30px;
+  opacity: 0.6;
+}
+
+body {
+  background-image: url("../imagenes/fondo_vino_index.jpg");
+  background-repeat: round;
+  background-attachment: fixed;
+}
+
+.texto_principal, h1 {
+  color: khaki;
+  font-weight: bolder;
+  font-family: arial sans-serif;
+}
+
+p {
+  color: khaki;
+  text-align: justify;
+  margin-top: 28px;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: arial sans-serif;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+footer {
+  background: black;
+  color: khaki;
+  padding-bottom: 3px;
+  margin: auto 0px 0px 0px;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.separador {
+  height: 120px;
+}
+
+.texto_footer {
+  color: khaki;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: courier;
+}
