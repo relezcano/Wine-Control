@@ -83,7 +83,9 @@
               require 'include/conexion.php';
 
               if(isset($_POST['refresh'])) {
-                $query = 'SELECT * FROM dispatch ORDER BY id DESC';
+
+                $idActual = $_SESSION['id'];
+                $query = "SELECT * FROM dispatch WHERE idEmploy = '$idActual' ORDER BY id DESC";
                 $result = mysqli_query($link, $query);
               ?>
               <div class="table-responsive">
@@ -102,6 +104,7 @@
                     <th scope="col">Destino</th>
                     <th scope="col">Comisión</th>
                     <th scope="col">Detalles</th>
+                    <th scope="col">ID Empleado</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -119,6 +122,7 @@
                     <td><?echo $row['destination'];?></td>
                     <td><?echo $row['commission'];?></td>
                     <td><?echo $row['obs'];?></td>
+                    <td><?echo $_SESSION['id'];?></td>
                   </tr>
                 </tbody>
                 <?}?>

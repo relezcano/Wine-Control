@@ -26,9 +26,10 @@ if(isset($_POST['guardar'])) {
           $form_dest = ($_POST['destination']);
           $form_comm = ($_POST['commission']);
           $form_obs = ($_POST['obs']);
+          $idEmploy = $_SESSION['id'];
 
-          $sql = "INSERT INTO dispatch (transport, dateDis, dateAr, send, recive, guide, amountPack, origin, destination, commission, obs)
-          VALUES ('$form_tran', '$form_ds', '$form_dl', '$form_send', '$form_recive', '$form_guide', '$form_pack', '$form_origin', '$form_dest', '$form_comm', '$form_obs')";//Se insertan los datos a la base de datos.
+          $sql = "INSERT INTO dispatch (transport, dateDis, dateAr, send, recive, guide, amountPack, origin, destination, commission, obs, idEmploy)
+          VALUES ('$form_tran', '$form_ds', '$form_dl', '$form_send', '$form_recive', '$form_guide', '$form_pack', '$form_origin', '$form_dest', '$form_comm', '$form_obs', '$idEmploy')";//Se insertan los datos a la base de datos.
           mysqli_query($link, $sql);
 
           header('Location: ../despacho.php?alt=7');

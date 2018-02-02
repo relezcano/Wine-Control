@@ -13,13 +13,22 @@ $type = $_POST['type'];
 $reason = $_POST['reason'];
 $obs = $_POST['obs'];
 
-$query = "UPDATE client SET name = '$name', lastName = '$last', phone = '$phone', email = '$email', dni = '$dni', address = '$address',
-type = '$type', reason = '$reason', obs = '$obs' WHERE id = '$id'";
-
+$query = "SELECT idEmploy FROM client WHERE id = '$id'";
 $result = mysqli_query($link, $query);
 
-mysqli_close($link);
+if ($result = $_SESSION['id']) {
 
-header ('Location: ../listaclientes.php?alt=10');
+  $query1 = "UPDATE client SET name = '$name', lastName = '$last', phone = '$phone', email = '$email', dni = '$dni', address = '$address',
+  type = '$type', reason = '$reason', obs = '$obs' WHERE id = '$id'";
+
+  $result1 = mysqli_query($link, $query1);
+
+  mysqli_close($link);
+
+  header ('Location: ../listaclientes.php?alt=10');
+
+}
+
+
 
 ?>

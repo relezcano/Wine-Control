@@ -82,7 +82,8 @@
               require 'include/conexion.php';
 
               if(isset($_POST['refresh'])) {
-                $query = 'SELECT * FROM client ORDER BY id DESC';
+                $idActual = $_SESSION['id'];
+                $query = "SELECT * FROM client WHERE idEmploy = '$idActual' ORDER BY id DESC";
                 $result = mysqli_query($link, $query);
               ?>
               <div class="table-responsive">
@@ -99,6 +100,7 @@
                     <th scope="col">Tipo de cliente</th>
                     <th scope="col">Razón social</th>
                     <th scope="col">Detalles</th>
+                    <th scope="col">ID Empleado</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -114,6 +116,7 @@
                     <td><?echo $row['type'];?></td>
                     <td><?echo $row['reason'];?></td>
                     <td><?echo $row['obs'];?></td>
+                    <td><?echo $row['idEmploy'];?></td>
                   </tr>
                 </tbody>
                 <?}?>
@@ -145,6 +148,7 @@
                   $type = $row['type'];
                   $reason = $row['reason'];
                   $obs = $row['obs'];
+
 
             ?>
           </form>

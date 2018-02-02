@@ -28,8 +28,9 @@ if(isset($_POST['registrar'])) {
           $form_type = ($_POST['type']);
           $form_reason = ($_POST['reason']);
           $form_obs = ($_POST['obs']);
+          $idEmploy = $_SESSION['id'];
 
-          $query = "INSERT INTO client (name, lastName, phone, email, dni, address, type, reason, obs) VALUES ('$form_name', '$form_last', '$form_phone', '$form_email', '$form_dni', '$form_address', '$form_type', '$form_reason', '$form_obs')";//Se insertan los datos a la base de datos y el usuario ya fue registrado con exito.
+          $query = "INSERT INTO client (name, lastName, phone, email, dni, address, type, reason, obs, idEmploy) VALUES ('$form_name', '$form_last', '$form_phone', '$form_email', '$form_dni', '$form_address', '$form_type', '$form_reason', '$form_obs', '$idEmploy')";//Se insertan los datos a la base de datos y el usuario ya fue registrado con exito.
           mysqli_query($link, $query);
 
           header('Location: ../agregar_cliente.php?alt=4');

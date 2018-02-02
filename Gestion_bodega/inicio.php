@@ -17,10 +17,20 @@
           <div class="col-md-2">
             <img src="imagenes/logo_vino.png" alt="Cecchin" style="width: 150px; height: 150px; margin-top: 35px">
           </div>
-          <div class="col-md-10">
+          <div class="col-md-7">
             <h1 style="font-size: 60px; font-family: sans-serif"><strong>Wine Control</strong></h1>
             <h3 style="font-size: 36px; font-family: sans-serif;"><strong><em>Interno</em></strong></h3>
             <h2 style="font-size: 40px; font-family: monospace"><strong>Menu Principal</strong></h2>
+          </div>
+          <div class="col-lg-3">
+            <?php
+            session_start();
+              if ($_SESSION['admin'] = 1){
+                $user = $_SESSION['name'];
+                ?>
+              <h4><span style="color: white; font-size: 16px; font-weight: bold; padding-right: 10px" class="glyphicon glyphicon-user"></span> Bienvenido, <?php echo $user;?>!</h4>
+              <h5><a href="include/logout.php"><span style="color: white; font-size: 12px; font-weight: bold" class="glyphicon glyphicon-off"> SALIR</span></a></h5>
+              <?}?>
           </div>
         </div>
       </div>

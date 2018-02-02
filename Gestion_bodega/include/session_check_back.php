@@ -13,11 +13,13 @@ if($data_user['email'] == $emailAdmin){
   if($data_user['pass'] == $passAdmin){
     if($data_user['admin'] == 1){
       //Ingreso exitoso
+      $_SESSION['id'] = $data_user['id'];
       $_SESSION['login'] = true;
       $_SESSION['email'] = $email;
       $_SESSION['phone'] = $data_user['phone'];
       $_SESSION['name'] = $data_user['name'];
       $_SESSION['ingresoAdmin'] = true;
+      $_SESSION['admin'] = $data_user['admin'];
       header('Location: ../inicio.php');
     } else {
       //Su cuenta de usuario no tiene permisos para ingresar aquí
