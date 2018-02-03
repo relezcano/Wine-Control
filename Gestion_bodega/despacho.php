@@ -140,6 +140,8 @@
           </div>
         </div>
 
+        <br>
+
         <div class="row">
           <div class="col-md-12">
             <h4 style="color: white; font-style: italic"><b>Observaciones:</b></h4>
