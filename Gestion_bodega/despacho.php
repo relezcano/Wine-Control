@@ -87,7 +87,7 @@
           <div class="col-md-6">
             <div class="input-group">
               <span class="input-group-addon" id="basic-addon1"><b>Destinatario:</b></span>
-              <input type="text" class="form-control" name="recive" placeholder="Nombre del destinatario" aria-describedby="basic-addon1" required>
+              <input type="text" class="form-control" name="recive" placeholder="Nombre de quién recibe el envio" aria-describedby="basic-addon1" required>
             </div>
           </div>
           <div class="col-md-6">

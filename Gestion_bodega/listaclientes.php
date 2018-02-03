@@ -82,9 +82,49 @@
               require 'include/conexion.php';
 
               if(isset($_POST['refresh'])) {
-                $idActual = $_SESSION['id'];
-                $query = "SELECT * FROM client WHERE idEmploy = '$idActual' ORDER BY id DESC";
-                $result = mysqli_query($link, $query);
+                if ($_SESSION['winery'] == 1) {
+                  $query = "SELECT * FROM client ORDER BY id DESC";
+                  $result = mysqli_query($link, $query);
+                  ?>
+                <div class="table-responsive">
+                <table class="table">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">ID</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Apellido</th>
+                      <th scope="col">Teléfono</th>
+                      <th scope="col">E-mail</th>
+                      <th scope="col">DNI/CUIT</th>
+                      <th scope="col">Dirección</th>
+                      <th scope="col">Tipo de cliente</th>
+                      <th scope="col">Razón social</th>
+                      <th scope="col">Detalles</th>
+                      <th scope="col">ID Empleado</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <?  while($row = mysqli_fetch_array($result)) {?>
+                        <td><?echo $row['id'];?></td>
+                        <td><?echo $row['name'];?></td>
+                        <td><?echo $row['lastName'];?></td>
+                        <td><?echo $row['phone'];?></td>
+                        <td><?echo $row['email'];?></td>
+                        <td><?echo $row['dni'];?></td>
+                        <td><?echo $row['address'];?></td>
+                        <td><?echo $row['type'];?></td>
+                        <td><?echo $row['reason'];?></td>
+                        <td><?echo $row['obs'];?></td>
+                        <td><?echo $row['idEmploy'];?></td>
+                    </tr>
+                  </tbody>
+                  <?}?>
+                </table>
+                <?}else{
+              $idActual = $_SESSION['id'];
+              $query1 = "SELECT * FROM client WHERE idEmploy = '$idActual' ORDER BY id DESC";
+              $result1 = mysqli_query($link, $query1);
               ?>
               <div class="table-responsive">
               <table class="table">
@@ -105,27 +145,28 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <?  while($row = mysqli_fetch_array($result)) {?>
-                    <td><?echo $row['id'];?></td>
-                    <td><?echo $row['name'];?></td>
-                    <td><?echo $row['lastName'];?></td>
-                    <td><?echo $row['phone'];?></td>
-                    <td><?echo $row['email'];?></td>
-                    <td><?echo $row['dni'];?></td>
-                    <td><?echo $row['address'];?></td>
-                    <td><?echo $row['type'];?></td>
-                    <td><?echo $row['reason'];?></td>
-                    <td><?echo $row['obs'];?></td>
-                    <td><?echo $row['idEmploy'];?></td>
+                    <?  while($row = mysqli_fetch_array($result1)) {?>
+                      <td><?echo $row['id'];?></td>
+                      <td><?echo $row['name'];?></td>
+                      <td><?echo $row['lastName'];?></td>
+                      <td><?echo $row['phone'];?></td>
+                      <td><?echo $row['email'];?></td>
+                      <td><?echo $row['dni'];?></td>
+                      <td><?echo $row['address'];?></td>
+                      <td><?echo $row['type'];?></td>
+                      <td><?echo $row['reason'];?></td>
+                      <td><?echo $row['obs'];?></td>
+                      <td><?echo $row['idEmploy'];?></td>
                   </tr>
                 </tbody>
                 <?}?>
               </table>
+            <?}?>
             </div>
           </div>
         </div>
 
-<?
+        <?
             }
             if(isset($_POST['buscar_cliente'])) {
               $busqueda = 1;

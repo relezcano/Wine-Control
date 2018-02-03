@@ -83,10 +83,53 @@
               require 'include/conexion.php';
 
               if(isset($_POST['refresh'])) {
-
-                $idActual = $_SESSION['id'];
-                $query = "SELECT * FROM dispatch WHERE idEmploy = '$idActual' ORDER BY id DESC";
-                $result = mysqli_query($link, $query);
+                if ($_SESSION['winery'] == 1) {
+                  $query = "SELECT * FROM dispatch ORDER BY id DESC";
+                  $result = mysqli_query($link, $query);
+                  ?>
+                <div class="table-responsive">
+                <table class="table">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">ID</th>
+                      <th scope="col">Transporte</th>
+                      <th scope="col">Fecha salida</th>
+                      <th scope="col">Fecha llegada</th>
+                      <th scope="col">Remitente</th>
+                      <th scope="col">Destinatario</th>
+                      <th scope="col">Nº Guía</th>
+                      <th scope="col">Bultos</th>
+                      <th scope="col">Origen</th>
+                      <th scope="col">Destino</th>
+                      <th scope="col">Comisión</th>
+                      <th scope="col">Detalles</th>
+                      <th scope="col">ID Empleado</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <?  while($row = mysqli_fetch_array($result)) {?>
+                      <td><?echo $row['id'];?></td>
+                      <td><?echo $row['transport'];?></td>
+                      <td><?echo $row['dateDis'];?></td>
+                      <td><?echo $row['dateAr'];?></td>
+                      <td><?echo $row['send'];?></td>
+                      <td><?echo $row['recive'];?></td>
+                      <td><?echo $row['guide'];?></td>
+                      <td><?echo $row['amountPack'];?></td>
+                      <td><?echo $row['origin'];?></td>
+                      <td><?echo $row['destination'];?></td>
+                      <td><?echo $row['commission'];?></td>
+                      <td><?echo $row['obs'];?></td>
+                      <td><?echo $row['idEmploy'];?></td>
+                    </tr>
+                  </tbody>
+                  <?}?>
+                </table>
+                <?}else{
+              $idActual = $_SESSION['id'];
+              $query1 = "SELECT * FROM dispatch WHERE idEmploy = '$idActual' ORDER BY id DESC";
+              $result1 = mysqli_query($link, $query1);
               ?>
               <div class="table-responsive">
               <table class="table">
@@ -109,7 +152,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <?  while($row = mysqli_fetch_array($result)) {?>
+                    <?  while($row = mysqli_fetch_array($result1)) {?>
                     <td><?echo $row['id'];?></td>
                     <td><?echo $row['transport'];?></td>
                     <td><?echo $row['dateDis'];?></td>
@@ -127,6 +170,7 @@
                 </tbody>
                 <?}?>
               </table>
+            <?}?>
             </div>
           </div>
         </div>
@@ -139,10 +183,10 @@
 
               if(isset($_POST['idbusqueda'])){
                 $id = ($_POST['idbusqueda']);
-                $query = "SELECT * FROM dispatch WHERE id LIKE '%" .$id. "%'";
-                $result = mysqli_query($link, $query);
+                $query3 = "SELECT * FROM dispatch WHERE id LIKE '%" .$id. "%'";
+                $result3 = mysqli_query($link, $query3);
 
-                while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+                while ($row = mysqli_fetch_array($result3, MYSQLI_ASSOC)) {
 
                   $userId = $row['id'];
                   $trans = $row['transport'];
