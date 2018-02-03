@@ -116,7 +116,7 @@
         <div class="row">
           <div class="col-md-12">
             <h4 style="color: white; font-style: italic"><b>Observaciones:</b></h4>
-            <textarea name="obs" cols="177" rows="5" style="color: black" placeholder="Escriba aquí detalles u observaciones del cliente. EJ.: Que consume?, Que tan a menudo suele comprar?" required></textarea>
+            <textarea name="obs" cols="136" rows="5" style="color: black" placeholder="Escriba aquí detalles u observaciones del cliente. EJ.: Que consume?, Que tan a menudo suele comprar?" required></textarea>
           </div>
         </div>
 

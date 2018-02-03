@@ -128,7 +128,7 @@
                 </table>
                 <?}else{
               $idActual = $_SESSION['id'];
-              $query1 = "SELECT * FROM dispatch WHERE idEmploy = '$idActual' ORDER BY id DESC";
+              $query1 = "SELECT * FROM dispatch WHERE idEmploy AND idRecive = '$idActual' ORDER BY id DESC";
               $result1 = mysqli_query($link, $query1);
               ?>
               <div class="table-responsive">
@@ -148,6 +148,7 @@
                     <th scope="col">Comisión</th>
                     <th scope="col">Detalles</th>
                     <th scope="col">ID Empleado</th>
+                    <th scope="col">ID Destinatario</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -165,7 +166,8 @@
                     <td><?echo $row['destination'];?></td>
                     <td><?echo $row['commission'];?></td>
                     <td><?echo $row['obs'];?></td>
-                    <td><?echo $_SESSION['id'];?></td>
+                    <td><?echo $row['idEmploy'];?></td>
+                    <td><?echo $row['idRecive'];?></td>
                   </tr>
                 </tbody>
                 <?}?>

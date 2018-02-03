@@ -130,9 +130,20 @@
         <br>
 
         <div class="row">
+          <div class="col-sm-3">
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1"><b>ID Destinatario:</b></span>
+              <input type="text" class="form-control" name="idRecive" placeholder="ID del destinatario" aria.describedby="basic-addon1" required>
+            </div>
+          </div>
+          <div class="col-sm-9">
+          </div>
+        </div>
+
+        <div class="row">
           <div class="col-md-12">
             <h4 style="color: white; font-style: italic"><b>Observaciones:</b></h4>
-            <textarea name="obs" cols="177" rows="5" placeholder="Escriba aquí todos los detalles del envío.." required></textarea>
+            <textarea name="obs" cols="136" rows="5" placeholder="Escriba aquí todos los detalles del envío.." required></textarea>
           </div>
         </div>
 
