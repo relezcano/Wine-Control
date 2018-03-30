@@ -19,29 +19,14 @@
       }
     ?>
 
-    <div class="container">
-      <div id="encabezado">
-        <div class="row">
-          <div class="col-md-2">
-            <img src="imagenes/logo_vino.png" alt="Cecchin" style="width: 150px; height: 150px">
-          </div>
-          <div class="col-md-10">
-            <h1 style="font-size: 60px; font-family: sans-serif"><strong>Wine Control</strong></h1>
-            <h2 style="font-size: 40px; font-family: monospace"><strong>Lista de despachos</strong></h2>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <br>
 
-    <form name="ListaDespacho" action="listadespacho.php" method="post">
 
-    <div class="container-fluid">
-      <div id="contenedor">
+    <div class="container-fluid" style="background-color: black; padding-top: 25px; padding-bottom: 30px; opacity: 0.9; color: white; border-radius: 60px">
+      <form name="ListaDespacho" action="listadespacho.php" method="post">
         <div class="row">
           <div class="col-md-12">
-            <h3 style="text-align: center; color: white; font-family: arial sans-serif; font-size: 36px"><em><strong>Refresque la lista presionando el botón de abajo.</strong></em></h3>
+            <h3 style="text-align: center; color: white; font-family: arial sans-serif; font-size: 26px"><em><strong>Refresque la lista presionando el botón <span class="glyphicon glyphicon-refresh">Refrescar</span><br>para mostrar todos los envíos cargados.</strong></em></h3>
           </div>
         </div>
 
@@ -61,8 +46,7 @@
 
         <br>
         <form name="modificar" action="listadespacho.php" method="post">
-        <div class="row" style="margin-left: 190px">
-          <div class="col-md-3"></div>
+        <div class="row">
           <div class="col-md-3">
             <div class="input-group">
               <span class="input-group-addon" id="basic-addon1"><b>Numero de ID:</b></span>
@@ -70,10 +54,8 @@
             </div>
           </div>
           <div class="col-md-3"><button type="submit" style="color: black" name="buscar_despacho" class="btn btn-success btn-md"><span class="glyphicon glyphicon-search"></button></div>
-          <div class="col-md-3"></div>
+          <div class="col-md-6"></div>
         </div>
-
-        <br>
 
         <div class="row">
           <div class="col-lg-12">
@@ -103,8 +85,8 @@
                       <th scope="col">Destino</th>
                       <th scope="col">Comisión</th>
                       <th scope="col">Detalles</th>
-                      <th scope="col">ID Empleado</th>
-                      <th scope="col">ID Destinatario</th>
+                      <th scope="col">ID Quién envía?</th>
+                      <th scope="col">ID Quién recibe?</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -149,8 +131,8 @@
                     <th scope="col">Destino</th>
                     <th scope="col">Comisión</th>
                     <th scope="col">Detalles</th>
-                    <th scope="col">ID Empleado</th>
-                    <th scope="col">ID Destinatario</th>
+                    <th scope="col">ID Quién envía?</th>
+                    <th scope="col">ID Quién recibe?</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -207,22 +189,9 @@
 
             ?>
           </form>
-            <div class="container">
-              <div id="encabezado">
-                <div class="row">
-                  <div class="col-md-12">
-                    <h2 style="font-size: 40px; font-family: monospace"><strong>Modificar este registro</strong></h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <br>
-
             <form name="Modespacho" action="include/modificar_despacho.php" method="post">
 
-            <div class="container">
-              <div id="contenedor">
+            <div class="container" style="background-color: black; padding-top: 25px; padding-bottom: 10px; opacity: 0.8; color: white; border-radius: 60px">
                 <div class="row">
                   <div class="col-md-12">
                     <h3 style="text-align: center; color: white; font-family: arial sans-serif; font-size: 36px"><em><strong>Datos del envío para modificar</strong></em></h3>
@@ -337,7 +306,6 @@
                   </div>
                   <div class="col-md-4"></div>
                 </div>
-              </div>
             </div>
           </form>
           <?

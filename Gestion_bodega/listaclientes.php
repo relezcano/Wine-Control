@@ -15,35 +15,22 @@
       if(isset($_GET['alt'])){
         if($_GET['alt'] == 10){
           echo '<script lenguage="javascript">alert("Cliente modificado exitosamente!!");</script>';
+        } elseif($_GET['alt'] == 11) {
+          echo '<script lenguage="javascript">alert("Por favor escriba el ID del cliente que desea modificar y luego presione el botón "Buscar".");</script>';
         }
       }
     ?>
 
-    <div class="container">
-      <div id="encabezado">
-        <div class="row">
-          <div class="col-md-2">
-            <img src="imagenes/logo_vino.png" alt="Cecchin" style="width: 150px; height: 150px">
-          </div>
-          <div class="col-md-10">
-            <h1 style="font-size: 60px; font-family: sans-serif"><strong>Wine Control</strong></h1>
-            <h2 style="font-size: 40px; font-family: monospace"><strong>Lista de despachos</strong></h2>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <br>
 
-    <form name="ListaClientes" action="listaclientes.php" method="post">
 
-    <div class="container-fluid">
-      <div id="contenedor">
-        <div class="row">
-          <div class="col-md-12">
-            <h3 style="text-align: center; color: white; font-family: arial sans-serif; font-size: 36px"><em><strong>Refresque la lista presionando el botón de abajo<br> para que aparezcan todos los clientes guardados.</strong></em></h3>
-          </div>
+    <div class="container-fluid" style="background-color: black; padding-top: 10px; padding-bottom: 30px; opacity: 0.9; color: white; border-radius: 60px">
+      <form name="ListaClientes" action="listaclientes.php" method="post">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 style="text-align: center; color: white; font-family: arial sans-serif; font-size: 26px"><em><strong>Refresque la lista presionando el botón <span class="glyphicon glyphicon-refresh">Refrescar</span><br> para mostrar todos los clientes guardados.</strong></em></h3>
         </div>
+      </div>
 
         <br>
 
@@ -61,8 +48,7 @@
 
         <br>
         <form name="modificar" action="listaclientes.php" method="post">
-        <div class="row" style="margin-left: 190px">
-          <div class="col-md-3"></div>
+        <div class="row">
           <div class="col-md-3">
             <div class="input-group">
               <span class="input-group-addon" id="basic-addon1"><b>Numero de ID:</b></span>
@@ -70,10 +56,9 @@
             </div>
           </div>
           <div class="col-md-3"><button type="submit" style="color: black" name="buscar_cliente" class="btn btn-success btn-md"><span class="glyphicon glyphicon-search"></button></div>
-          <div class="col-md-3"></div>
+          <div class="col-md-6"></div>
         </div>
 
-        <br>
         <div class="row">
           <div class="col-lg-12">
             <?
@@ -167,6 +152,7 @@
         </div>
 
         <?
+        //BUSCAR CLIENTES
             }
             if(isset($_POST['buscar_cliente'])) {
               $busqueda = 1;
@@ -193,25 +179,12 @@
 
             ?>
           </form>
-            <div class="container">
-              <div id="encabezado">
-                <div class="row">
-                  <div class="col-md-12">
-                    <h2 style="font-size: 40px; font-family: monospace"><strong>Modificar este registro</strong></h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <br>
-
             <form name="Modcliente" action="include/modificar_cliente.php" method="post">
 
-              <div class="container">
-                <div id="contenedor">
+              <div class="container" style="background-color: black; padding-top: 25px; padding-bottom: 10px; opacity: 0.8; color: white; border-radius: 60px">
                   <div class="row">
                     <div class="col-md-12">
-                      <h3 style="text-align: center; color: white; font-family: arial sans-serif; font-size: 36px"><em><strong>Registrar Nuevo Cliente</strong></em></h3>
+                      <h3 style="text-align: center; color: white; font-family: arial sans-serif; font-size: 36px"><em><strong>Modificar datos del cliente</strong></em></h3>
                     </div>
                   </div>
                   <br>
@@ -305,7 +278,6 @@
                     </div>
                     <div class="col-md-4"></div>
                   </div>
-                </div>
               </div>
               </form>
           <?

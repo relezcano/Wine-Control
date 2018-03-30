@@ -2,41 +2,13 @@
 /* CSS Document */
 
 body {
-  background-image: url("../imagenes/fondo3.jpg");
-  background-repeat: round;
+  background-image: url("../imagenes/fondo5.jpg");
+  background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
 }
 
-#encabezado {
-  border-radius: 60px;
-  align-items: left;
-  width: auto;
-  margin-top: 100px;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: black;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 200px;
-  opacity: 0.8;
-  color: white;
-}
-
-#contenedor {
-  border-radius: 60px;
-  align-items: center;
-  width: auto;
-  margin-top: 10px;
-  margin-right: auto;
-  margin-bottom: 10px;
-  margin-left: auto;
-  background-color: black;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 65px;
-  opacity: 0.95;
-  color: white;
-}
 
 .logo {
   margin-top: 10px;
@@ -71,20 +43,25 @@ p {
 }
 
 h1 {
+  padding-top: 10px;
   color: white;
-  padding-left: 150px;
   font-style: oblique;
 }
 
 h2 {
   color: white;
-  padding-left: 150px;
   font-style: italic;
 }
 
 h3 {
 
   color: white;
-  padding-left: 260px;
   font-style: italic;
+  padding-left: 10px;
+}
+
+.btn {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

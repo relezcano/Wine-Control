@@ -19,11 +19,19 @@ $query = "SELECT idEmploy FROM client WHERE id = '$id1'";
 $result = mysqli_query($link, $query);
 
 if ($result = $_SESSION['id']) {
+  if ($_POST['obs'] != ''){
 
-  $query1 = "UPDATE dispatch SET transport = '$trans1', dateDis = '$ds1', dateAr = '$dl1', send = '$send1', recive = '$recive1', guide = '$guide1',
-  amountPack = '$pack1', origin = '$origin1', destination = '$dest1', commission = '$comm1', obs = '$obs1' WHERE id = '$id1'";
+    $query1 = "UPDATE dispatch SET transport = '$trans1', dateDis = '$ds1', dateAr = '$dl1', send = '$send1', recive = '$recive1', guide = '$guide1',
+    amountPack = '$pack1', origin = '$origin1', destination = '$dest1', commission = '$comm1', obs = '$obs1' WHERE id = '$id1'";
 
-  $result1 = mysqli_query($link, $query1);
+    $result1 = mysqli_query($link, $query1);
+  } else {
+
+    $query1 = "UPDATE dispatch SET transport = '$trans1', dateDis = '$ds1', dateAr = '$dl1', send = '$send1', recive = '$recive1', guide = '$guide1',
+    amountPack = '$pack1', origin = '$origin1', destination = '$dest1', commission = '$comm1' WHERE id = '$id1'";
+
+    $result1 = mysqli_query($link, $query1);
+  }
 
   mysqli_close($link);
 

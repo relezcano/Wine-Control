@@ -1,10 +1,12 @@
 <?php
 //Conectar con la base de datos de Vinos.
 
-$link = mysqli_connect('127.0.0.1:3306', 'root', '');
+	$dbhost = 'localhost';
+	$dbuser = 'c1190301_wineDB';
+	$dbpass = 'dofiZOwu06';
+	$dbname = 'c1190301_wineDB';
 
-$db = 'gestionbodega';
-mysqli_select_db($link, $db);
-
+	$link = mysqli_connect($dbhost, $dbuser, $dbpass) or die ('Ocurrio un error al conectarse al servidor mysql');
+	mysqli_select_db($link, $dbname);
 
 ?>

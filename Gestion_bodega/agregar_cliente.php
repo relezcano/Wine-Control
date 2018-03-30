@@ -23,20 +23,6 @@
       }
     ?>
 
-
-    <div class="container">
-      <div id="encabezado">
-        <div class="row">
-          <div class="col-md-2">
-            <img src="imagenes/logo_vino.png" alt="Cecchin" style="width: 150px; height: 150px; float: right">
-          </div>
-          <div class="col-md-10">
-            <h1 style="font-size: 60px; font-family: sans-serif"><strong>Wine Control</strong></h1>
-            <h2 style="font-size: 40px; font-family: monospace"><strong>Agregar Cliente</strong></h2>
-          </div>
-        </div>
-      </div>
-    </div>
     <br>
     <form name="Registro" action="include/registro_cliente.php" method="post">
 
@@ -114,10 +100,11 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-6">
             <h4 style="color: white; font-style: italic"><b>Observaciones:</b></h4>
-            <textarea name="obs" cols="136" rows="5" style="color: black" placeholder="Escriba aquí detalles u observaciones del cliente. EJ.: Que consume?, Que tan a menudo suele comprar?" required></textarea>
+            <textarea style="width: 100%; height: 100%; color: black" name="obs" cols="50" rows="5" placeholder="Escriba aquí detalles u observaciones del cliente. EJ.: Que consume?, Que tan a menudo suele comprar?" required></textarea>
           </div>
+          <div class="col-md-6"></div>
         </div>
 
         <br>

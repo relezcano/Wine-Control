@@ -21,20 +21,6 @@
        }
     ?>
 
-    <div class="container">
-      <div id="encabezado">
-        <div class="row">
-          <div class="col-md-2">
-            <img src="imagenes/logo_vino.png" alt="Cecchin" style="width: 150px; height: 150px">
-          </div>
-          <div class="col-md-10">
-            <h1 style="font-size: 60px; font-family: sans-serif"><strong>Wine Control</strong></h1>
-            <h2 style="font-size: 40px; font-family: monospace"><strong>Despacho de mercadería</strong></h2>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <br>
 
     <form name="Despacho" action="include/registro_despacho.php" method="post">
@@ -143,10 +129,11 @@
         <br>
 
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-6">
             <h4 style="color: white; font-style: italic"><b>Observaciones:</b></h4>
-            <textarea name="obs" cols="136" rows="5" placeholder="Escriba aquí todos los detalles del envío.." required></textarea>
+            <textarea style="width: 100%; height: 100%" name="obs" cols="50" rows="5" placeholder="Escriba aquí todos los detalles del envío.." required></textarea>
           </div>
+          <div class="col-md-6"></div>
         </div>
 
         <br>

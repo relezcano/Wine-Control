@@ -2,9 +2,11 @@
 /* CSS Document */
 
 body {
-  background-image: url("../imagenes/fondo3.jpg");
-  background-repeat: round;
+  background-image: url("../imagenes/fondo1.jpg");
+  background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
 }
 
 #encabezado {
@@ -18,7 +20,7 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 200px;
-  opacity: 0.8;
+  opacity: 0.9;
   color: white;
 }
 
@@ -35,7 +37,7 @@ body {
   padding-bottom: 10px;
   padding-left: 15px;
   padding-right: 15PX;
-  opacity: 0.8;
+  opacity: 0.9;
   color: black;
 }
 
