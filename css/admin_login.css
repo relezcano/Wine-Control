@@ -1,0 +1,36 @@
+@charset "ISO-8859-1";
+/* CSS Document */
+
+body {
+  background-image: url("../imagenes/fondo4.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  height: 535px;
+}
+
+.logo {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+
+p {
+  color: white;
+  text-align: justify;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: arial;
+}
+
+
+.reg {
+  font-size: 10px;
+  height: 35px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+
+}

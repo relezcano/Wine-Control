@@ -1,0 +1,67 @@
+@charset "ISO-8859-1";
+/* CSS Document */
+
+body {
+  background-image: url("../imagenes/fondo5.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+
+.logo {
+  margin-top: 10px;
+  margin-left: 120px;
+  margin-bottom: 30px;
+  opacity: 0.6;
+}
+
+.titulo {
+  color: white;
+  font-weight: bold;
+  font-family: arial;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+p {
+  color: white;
+  text-align: justify;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: arial;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  font-family: courier;
+}
+
+h1 {
+  padding-top: 10px;
+  color: white;
+  font-style: oblique;
+}
+
+h2 {
+  color: white;
+  font-style: italic;
+}
+
+h3 {
+
+  color: white;
+  font-style: italic;
+  padding-left: 10px;
+}
+
+.btn {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
