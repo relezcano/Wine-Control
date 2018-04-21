@@ -28,7 +28,8 @@
       <form name="ListaClientes" action="listaclientes.php" method="post">
       <div class="row">
         <div class="col-md-12">
-          <h3 style="text-align: center; color: white; font-family: arial sans-serif; font-size: 26px"><em><strong>Refresque la lista presionando el botón <span class="glyphicon glyphicon-refresh">Refrescar</span><br> para mostrar todos los clientes guardados.</strong></em></h3>
+          <h3 style="text-align: center; color: white; font-family: arial sans-serif; font-size: 26px"><em><strong>Refresque la lista presionando el botón <span class="glyphicon glyphicon-refresh">Actualizar</span><br> para mostrar todos los clientes guardados.</strong></em></h3>
+          <h4 style="text-align: center; color: white; font-family: arial sans-serif; font-size: 20px"><em><strong>Si desea modificar algún dato del cliente, escriba el nº de ID de dicho cliente y haga click en la lupa.</strong></em></h4>
         </div>
       </div>
 
@@ -37,10 +38,10 @@
         <div class="row">
           <div class="col-md-5"></div>
           <div class="col-md-1 reg">
-            <button type="submit" class="btn btn-primary btn-md" style="color: black" name="refresh"><span class="glyphicon glyphicon-refresh"> <strong>Refrescar</strong></span></button>
+            <button type="submit" class="btn btn-primary btn-md" style="color: black; border-color: white; border-weight: medium; border-style: solid" name="refresh"><span class="glyphicon glyphicon-refresh"></span> <strong>Actualizar</strong></button>
           </div>
           <div class="col-md-1 reg">
-            <button type="button" class="btn btn-danger" style="color: black" onclick="location.href = 'inicio.php';"><span class="glyphicon glyphicon-circle-arrow-left"> <strong>Volver</strong></span></button>
+            <button type="button" class="btn btn-danger" style="color: black; border-color: white; border-weight: medium; border-style: solid" onclick="location.href = 'inicio.php';"><span class="glyphicon glyphicon-circle-arrow-left"></span> <strong>Volver</strong></button>
           </div>
           <div class="col-md-5"></div>
         </div>
@@ -55,7 +56,7 @@
               <input type="text" class="form-control" name="idbusqueda" placeholder="Escriba aquí el ID" aria-describedby="basic-addon1">
             </div>
           </div>
-          <div class="col-md-3"><button type="submit" style="color: black" name="buscar_cliente" class="btn btn-success btn-md"><span class="glyphicon glyphicon-search"></button></div>
+          <div class="col-md-3"><button type="submit" style="color: black; border-color: white; border-weight: medium; border-style: solid" name="buscar_cliente" class="btn btn-success btn-md"><span class="glyphicon glyphicon-search"></span></button></div>
           <div class="col-md-6"></div>
         </div>
 
@@ -188,7 +189,7 @@
                     </div>
                   </div>
                   <br>
-                  <div class="row">
+                  <div class="row" hidden>
                     <div class="col-sm-1">
                       <input type="text" name="id" value="<? echo $userId;?>" type="hidden">
                     </div>
@@ -244,10 +245,11 @@
                       <div class="input-group">
                         <div class="form-group">
                           <label for="sel1">Seleccione tipo de cliente:</label>
-                          <select class="form-control" id="sel1" select="<?echo $type;?>" name="type">
-                            <option select="<?echo $type;?>" name="1">Consumidor Final</option>
-                            <option select="<?echo $type;?>" name="2">Distribuidor</option>
-                            <option select="<?echo $type;?>" name="3">Comercio (Vinoteca, restaurant, otros.)</option>
+                          <select class="form-control" id="sel1" name="type">
+                            <option value="<?echo $type;?>"></option>
+                            <option name="1">Consumidor Final</option>
+                            <option name="2">Distribuidor</option>
+                            <option name="3">Comercio (Vinoteca, restaurant, otros.)</option>
                           </select>
                         </div>
                         </div>
@@ -262,7 +264,7 @@
                   <div class="row">
                     <div class="col-md-12">
                       <h4 style="color: white; font-style: italic"><b>Observaciones:</b></h4>
-                      <textarea name="obs" class="form-control" style="color: black" cols="177" rows="5" value="<?echo $obs;?>" ></textarea>
+                      <textarea name="obs" class="form-control" style="color: black" cols="177" rows="5"><?echo $obs;?></textarea>
                     </div>
                   </div>
 
@@ -271,10 +273,10 @@
                   <div class="row">
                     <div class="col-md-4"></div>
                     <div class="col-md-2 reg">
-                      <button type="submit" class="btn btn-success btn-md" style="color: black" name="registrar"><span class="glyphicon glyphicon-ok"> <strong>Guardar</strong></span></button>
+                      <button type="submit" class="btn btn-success btn-md" style="color: black; border-color: white; border-weight: medium; border-style: solid" name="registrar"><span class="glyphicon glyphicon-ok"></span> <strong>Guardar</strong></button>
                     </div>
                     <div class="col-md-2 reg">
-                      <button type="button" class="btn btn-danger btn-md" style="color: black" onclick="location.href = 'listaclientes.php';"><span class="glyphicon glyphicon-remove"> <strong>Cancelar</strong></span></button>
+                      <button type="button" class="btn btn-danger btn-md" style="color: black; border-color: white; border-weight: medium; border-style: solid" onclick="location.href = 'listaclientes.php';"><span class="glyphicon glyphicon-remove"></span> <strong>Cancelar</strong></button>
                     </div>
                     <div class="col-md-4"></div>
                   </div>

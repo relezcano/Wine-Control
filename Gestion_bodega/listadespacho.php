@@ -26,7 +26,8 @@
       <form name="ListaDespacho" action="listadespacho.php" method="post">
         <div class="row">
           <div class="col-md-12">
-            <h3 style="text-align: center; color: white; font-family: arial sans-serif; font-size: 26px"><em><strong>Refresque la lista presionando el botón <span class="glyphicon glyphicon-refresh">Refrescar</span><br>para mostrar todos los envíos cargados.</strong></em></h3>
+            <h3 style="text-align: center; color: white; font-family: arial sans-serif; font-size: 26px"><em><strong>Refresque la lista presionando el botón <span class="glyphicon glyphicon-refresh"></span>Actualizar<br>para mostrar todos los envíos cargados.</strong></em></h3>
+            <h4 style="text-align: center; color: white; font-family: arial sans-serif; font-size: 20px"><em><strong>Si desea modificar datos de algún envío, escriba el nº de ID de dicho despacho y haga click en la lupa.</strong></em></h4>
           </div>
         </div>
 
@@ -35,10 +36,10 @@
         <div class="row">
           <div class="col-md-5"></div>
           <div class="col-md-1 reg">
-            <button type="submit" class="btn btn-primary btn-md" style="color: black" name="refresh"><span class="glyphicon glyphicon-refresh"> <strong>Refrescar</strong></span></button>
+            <button type="submit" class="btn btn-primary btn-md" style="color: black; border-color: white; border-weight: medium; border-style: solid" name="refresh"><span class="glyphicon glyphicon-refresh"></span> <strong>Actualizar</strong></button>
           </div>
           <div class="col-md-1 reg">
-            <button type="button" class="btn btn-danger" style="color: black" onclick="location.href = 'inicio.php';"><span class="glyphicon glyphicon-circle-arrow-left"> <strong>Volver</strong></span></button>
+            <button type="button" class="btn btn-danger" style="color: black; border-color: white; border-weight: medium; border-style: solid" onclick="location.href = 'inicio.php';"><span class="glyphicon glyphicon-circle-arrow-left"></span> <strong>Volver</strong></button>
           </div>
           <div class="col-md-5"></div>
         </div>
@@ -53,9 +54,10 @@
               <input type="text" class="form-control" name="idbusqueda" placeholder="Escriba aquí el ID" aria-describedby="basic-addon1">
             </div>
           </div>
-          <div class="col-md-3"><button type="submit" style="color: black" name="buscar_despacho" class="btn btn-success btn-md"><span class="glyphicon glyphicon-search"></button></div>
+          <div class="col-md-3"><button type="submit" style="color: black; border-color: white; border-weight: medium; border-style: solid" name="buscar_despacho" class="btn btn-success btn-md"><span class="glyphicon glyphicon-search"></span></button></div>
           <div class="col-md-6"></div>
         </div>
+
 
         <div class="row">
           <div class="col-lg-12">
@@ -110,6 +112,7 @@
                   </tbody>
                   <?}?>
                 </table>
+                <br><br><br><br>
                 <?}else{
               $idActual = $_SESSION['id'];
               $query1 = "SELECT * FROM dispatch WHERE idRecive = '$idActual' or idEmploy = '$idActual' ORDER BY id DESC";
@@ -160,6 +163,8 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
 
         <?
             }
@@ -200,7 +205,7 @@
 
                 <br>
 
-                <div class="row">
+                <div class="row" hidden>
                   <div class="col-sm-1">
                     <input type="text" name="id" value="<? echo $userId;?>" type="hidden">
                   </div>
@@ -288,8 +293,8 @@
 
                 <div class="row">
                   <div class="col-md-12">
-                    <h4 style="color: white; font-style: italic"><b>Observaciones:</b></h4>
-                    <textarea name="obs" class="form-control" style="color: black" cols="177" rows="5" placeholder="Para bajar de renglon escriba <br>" value="<? echo $obs;?>" ></textarea>
+                    <h4 style="color: white; font-style: italic"><b>Detalles del envío:</b></h4>
+                    <textarea name="obs" class="form-control" style="color: black" cols="177" rows="5"><? echo $obs;?></textarea>
                   </div>
                 </div>
 
@@ -299,10 +304,10 @@
                 <div class="row">
                   <div class="col-md-4"></div>
                   <div class="col-md-2 reg">
-                    <button type="submit" class="btn btn-success btn-md" style="color: black" name="guardar"><span class="glyphicon glyphicon-ok"> <strong>Guardar</strong></span></button>
+                    <button type="submit" class="btn btn-success btn-md" style="color: black; border-color: white; border-weight: medium; border-style: solid" name="guardar"><span class="glyphicon glyphicon-ok"></span> <strong>Guardar</strong></button>
                   </div>
                   <div class="col-md-2 reg">
-                    <button type="button" class="btn btn-danger btn-md" style="color: black" onclick="location.href = 'listadespacho.php';"><span class="glyphicon glyphicon-remove"> <strong>Cancelar</strong></span></button>
+                    <button type="button" class="btn btn-danger btn-md" style="color: black; border-color: white; border-weight: medium; border-style: solid" onclick="location.href = 'listadespacho.php';"><span class="glyphicon glyphicon-remove"></span> <strong>Cancelar</strong></button>
                   </div>
                   <div class="col-md-4"></div>
                 </div>
